@@ -79,17 +79,38 @@ static async generateResetToken(email) {
   }
   
 
-    // Mettre à jour un utilisateur
-    static async update(userId, updatedUser) {
-        const sql = `
-      UPDATE users 
-      SET first_name = ?, last_name = ?, email = ?, password = ?, phone = ?
-      WHERE user_id = ?
-    `;
+ // Mettre à jour un utilisateur
+ static async update(userId, updatedUser) {
+  // Construire une liste des colonnes à mettre à jour et des valeurs correspondantes
+  const updates = [];
+  const values = [];
 
-        const values = [updatedUser.first_name, updatedUser.last_name, updatedUser.email, updatedUser.password, updatedUser.phone, userId];
-        await pool.query(sql, values);
-    }
+  // Itérer sur les clés de l'objet updatedUser
+  for (const key in updatedUser) {
+      // Vérifier si la clé est une propriété valide de l'utilisateur (et non un prototype)
+      if (updatedUser.hasOwnProperty(key)) {
+          updates.push(`${key} = ?`);
+          values.push(updatedUser[key]);
+      }
+  }
+
+  // Ajouter l'ID de l'utilisateur à la fin des valeurs
+  values.push(userId);
+
+  // Vérifier s'il y a des mises à jour à effectuer
+  if (updates.length === 0) {
+      return; // Aucune mise à jour nécessaire
+  }
+
+  // Construire la requête SQL
+  const sql = `
+      UPDATE users 
+      SET ${updates.join(', ')}
+      WHERE user_id = ?
+  `;
+
+  await pool.query(sql, values);
+}
 
     // Rénitialiser le mot de passe via un lien par mail 
 
