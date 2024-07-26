@@ -1,0 +1,379 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+.cta-btn, .login-btn, .signup-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-btn:hover, .login-btn:hover, .signup-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero section */
+#hero {
+    background-color: #f0f8ff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#search-form input,
+#search-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+#search-form input {
+    margin-right: 10px;
+}
+
+#search-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Featured jobs section */
+#featured-jobs {
+    padding: 80px 0;
+}
+
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.job-listing {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-listing:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.job-listing h3 {
+    margin-top: 0;
+}
+
+.company,
+.location {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.apply-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px
+}
+
+
+/*Section Login */
+
+/* Login section */
+#login {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+.signup-prompt {
+    margin-top: 20px;
+    color: #666;
+}
+
+.signup-prompt a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* S'inscrire section */
+
+/* Signup section */
+#signup {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.signup-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+.login-prompt {
+    margin-top: 20px;
+    color: #666;
+}
+
+.login-prompt a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* Styles pour la section des offres d'emploi */
+
+
+/* Style pour le conteneur principal */
+main {
+    padding: 80px 0;
+}
+
+/* Style pour le titre des annonces */
+#job-listings h1 {
+    text-align: center;
+    margin-bottom: 3rem; /* 3rem au lieu de 50px pour plus de cohérence */
+    font-size: 2.5rem; /* Taille de police en rem pour flexibilité */
+}
+
+/* Style pour chaque annonce de job */
+.job-listing {
+    background-color: #fff;
+    padding: 2rem; /* 2rem au lieu de 30px */
+    border-radius: 0.5rem; /* 0.5rem pour un rayon plus cohérent */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* Valeurs en rem */
+    margin-bottom: 2rem; /* 2rem au lieu de 30px */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+/* Effet au survol pour les annonces de job */
+.job-listing:hover {
+    transform: translateY(-0.3125rem); /* 0.3125rem au lieu de 5px */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15); /* Valeurs en rem */
+}
+.job-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem; /* Espacement entre les éléments de l'en-tête */
+}
+
+/* Style pour le logo de l'entreprise */
+.company-logo {
+    max-width: 6.25rem; /* 100px en rem */
+    margin-right: 1.25rem; /* 20px en rem */
+    flex-shrink: 0;
+}
+
+/* Style pour les détails de l'annonce */
+.job-details {
+    flex-grow: 1;
+}
+
+.job-details h2 {
+    margin-top: 0;
+}
+
+/* Style pour les métadonnées de l'annonce */
+.job-meta {
+    display: flex;
+    gap: 1.25rem; /* 20px en rem */
+    align-items: center;
+    align-content: space-between;
+    margin-bottom: 1.25rem; /* 20px en rem */
+}
+
+/* Couleur pour le texte des éléments de l'annonce */
+.company, .location, .salary {
+    color: #666;
+}
+
+/* Style pour la description du poste */
+.description {
+    margin: 1.25rem 0; /* 20px en rem */
+    color: #444;
+    line-height: 1.6; /* Amélioration de la lisibilité */
+}
+
+/* Style pour le bouton de candidature */
+.apply-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem; /* 8px 16px en rem */
+    border-radius: 0.3125rem; /* 5px en rem */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol pour le bouton de candidature */
+.apply-btn:hover {
+    background-color: #0056b3; /* Couleur légèrement plus sombre pour l'effet au survol */
+}
+
+
